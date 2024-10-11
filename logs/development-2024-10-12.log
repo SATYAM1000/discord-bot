@@ -1,0 +1,44 @@
+{
+    "level": "INFO",
+    "message": "DB_CONNECTED",
+    "timestamp": "2024-10-11T21:10:35.102Z",
+    "meta": {
+        "message": "Database connected successfully!",
+        "host": "localhost",
+        "port": 27017,
+        "timestamp": "2024-10-11T21:10:35.098Z",
+        "env": "development"
+    }
+}
+{
+    "level": "INFO",
+    "message": "BOT_STARTED",
+    "timestamp": "2024-10-11T21:10:37.423Z",
+    "meta": {
+        "message": "Bot logged in successfully!",
+        "timestamp": "2024-10-11T21:10:37.423Z",
+        "env": "development"
+    }
+}
+{
+    "level": "INFO",
+    "message": "DB_CONNECTED",
+    "timestamp": "2024-10-11T21:11:35.918Z",
+    "meta": {
+        "message": "Database connected successfully!",
+        "host": "localhost",
+        "port": 27017,
+        "timestamp": "2024-10-11T21:11:35.914Z",
+        "env": "development"
+    }
+}
+{
+    "level": "INFO",
+    "message": "BOT_STARTED",
+    "timestamp": "2024-10-11T21:11:37.997Z",
+    "meta": {
+        "message": "Bot logged in successfully!",
+        "timestamp": "2024-10-11T21:11:37.997Z",
+        "env": "development"
+    }
+}

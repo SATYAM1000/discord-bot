@@ -1,8 +1,8 @@
-import { envConfig } from "./config/env.config.js";
 import { botServices } from "./services/service.js";
 
 import { Client, GatewayIntentBits, PermissionsBitField } from "discord.js";
 import { conversationStarters } from "./constants/constant.js";
+import { startDiscordBot } from "./config/bot.config.js";
 
 const monitoredChannels = new Set();
 
@@ -15,12 +15,10 @@ const client = new Client({
   ],
 });
 
+
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
-
-
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot) {
@@ -131,8 +129,4 @@ client.on("messageCreate", async (message) => {
   }
 });
 
-
-
-
-
-client.login(envConfig.DISCORD_BOT_TOKEN);
+startDiscordBot(client);

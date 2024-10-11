@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 10
+    },
+    "auditLog": "D:\\personal-projects\\0.5-discord-bot\\logs\\.9fffa24ea0bf2c39329f68f536ff783ab1f518c9-audit.json",
+    "files": [
+        {
+            "date": 1728681034502,
+            "name": "D:\\personal-projects\\0.5-discord-bot\\logs\\development-2024-10-12.log",
+            "hash": "3234ee4163c76d887e68831c4b3f4009f11ff7ce40dba80dda84d8043b327ecf"
+        }
+    ],
+    "hashType": "sha256"
+}

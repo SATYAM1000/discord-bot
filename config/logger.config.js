@@ -1,3 +1,4 @@
+import "winston-mongodb";
 import "winston-daily-rotate-file";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -91,12 +92,7 @@ const fileLogFormat = format.printf((info) => {
 const fileTransport = () => {
   return [
     new transports.DailyRotateFile({
-      filename: path.join(
-        __dirname,
-        "../",
-        "logs",
-        `${envConfig.ENV}-%DATE%.log`
-      ),
+      filename: path.join(__dirname, "../", "logs", `${envConfig.ENV}-%DATE%.log`),
       datePattern: "YYYY-MM-DD",
       level: "info",
       maxSize: "20m",
@@ -106,9 +102,25 @@ const fileTransport = () => {
   ];
 };
 
+const MongodbTransport = () => {
+  return [
+    new transports.MongoDB({
+      level: "info",
+      db: envConfig.DATABASE_URL,
+      metaKey: "meta",
+      expireAfterSeconds: 3600 * 24 * 30,
+      collection: "application-logs",
+    }),
+  ];
+};
+
 export const logger = createLogger({
   defaultMeta: {
     meta: {},
   },
-  transports: [...fileTransport(), ...consoleTransport()],
+  transports: [
+    ...fileTransport(),
+    ...MongodbTransport(),
+    ...consoleTransport(),
+  ],
 });

@@ -17,8 +17,10 @@
     "colorette": "^2.0.20",
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.5",
+    "mongoose": "^8.7.1",
     "winston": "^3.15.0",
-    "winston-daily-rotate-file": "^5.0.0"
+    "winston-daily-rotate-file": "^5.0.0",
+    "winston-mongodb": "^6.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
